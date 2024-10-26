@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+a {
+  color: rgb(48, 158, 255);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #5acef2;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.nav-links li::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.nav-links:hover::after{
+  width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #5acef2;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Responsive */
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        z-index: 1000; /* Asegura que el menú esté al frente */
+    }
+    
+    .nav-links li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Estilo cuando el menú está activo */
+    .nav-links.active {
+        display: flex;
+        opacity: 1; /* Asegura visibilidad */
+        height: auto; /* Permite que el menú ajuste su altura */
+        top: 10%   
+    }
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1500px; /* Maximum width */
+    height: 500px;
+    margin: 0 auto; /* Center it */
+  }
+  
+  .slideshow-container .text {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgb(0, 0, 0); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+    padding-bottom: 30px;
+  }
+
+  .decoracion{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(173, 173, 173);
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+/*Codigo A.*/
+  div.gallery {
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    align-self: center;
+    height: 40%;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    height: 40%;
+  }
+  
+  
+  .responsive {
+    padding: 20px;
+    float: left;
+    width: 25%;
+    height: 40%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+  padding-left: 0%;
+  padding-bottom: 5%;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(173, 173, 173);
+}
+
+.footer .foot {
+ padding: 15px;
+}
+
+.foot a{
+  color: #135db2;
+}
+
+div.content-not {
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+div.content-not:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+div.noticias img {
+  width: 100%;
+  align-self: center;
+  height: 40%;
+}
+
+div.noticias {
+  padding: 15px;
+  text-align: center;
+  height: 40%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contenedorT {
+  padding: 20px;
+  float: left;
+  width: 25%;
+  height: 40%;
+}
+
+@media only screen and (max-width: 700px) {
+  .contenedorT {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contenedorT {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
